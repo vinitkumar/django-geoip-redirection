@@ -1,15 +1,15 @@
 Django GeoIP Redirection
 ========================
 
-![https://travis-ci.org/vinitkumar/django-django_geoip_redirection.png](https://travis-ci.org/vinitkumar/django-django_geoip_redirection)
+![https://travis-ci.org/vinitkumar/django_geoip_redirection.png](https://travis-ci.org/vinitkumar/django_geoip_redirection)
 
-![https://coveralls.io/repos/vinitkumar/django-django_geoip_redirection/badge.png](https://coveralls.io/r/vinitkumar/django-django_geoip_redirection)
+![https://coveralls.io/repos/vinitkumar/django_geoip_redirection/badge.png](https://coveralls.io/r/vinitkumar/django_geoip_redirection)
 
-![https://pypip.in/d/django-django_geoip_redirection/badge.png](https://pypi.python.org/pypi/django-django_geoip_redirection/)
+![https://pypip.in/d/django_geoip_redirection/badge.png](https://pypi.python.org/pypi/django_geoip_redirection/)
 
-![https://pypip.in/v/django-django_geoip_redirection/badge.png](https://pypi.python.org/pypi/django-django_geoip_redirection/)
+![https://pypip.in/v/django_geoip_redirection/badge.png](https://pypi.python.org/pypi/django_geoip_redirection/)
 
-![https://pypip.in/license/django-django_geoip_redirection/badge.png](https://pypi.python.org/pypi/django-django_geoip_redirection/)
+![https://pypip.in/license/django_geoip_redirection/badge.png](https://pypi.python.org/pypi/django_geoip_redirection/)
 
 
 

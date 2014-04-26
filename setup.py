@@ -11,13 +11,13 @@ def read(*parts):
 
 
 setup(
-    author="",
-    author_email="",
-    description="",
-    name="django-django_geoip_redirection",
+    author="Vinit Kumar",
+    author_email="vinit.kumar@changer.nl",
+    description="GeoIP based redirection middleware",
+    name="django_geoip_redirection",
     long_description=read("README.rst"),
     version=__import__("django_geoip_redirection").__version__,
-    url="http://django-django_geoip_redirection.rtfd.org/",
+    url="http://django_geoip_redirection.rtfd.org/",
     license="MIT",
     packages=find_packages(),
     tests_require=[
