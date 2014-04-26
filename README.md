@@ -1,19 +1,6 @@
 Django GeoIP Redirection
 ========================
 
-![https://travis-ci.org/vinitkumar/django_geoip_redirection.png](https://travis-ci.org/vinitkumar/django_geoip_redirection)
-
-![https://coveralls.io/repos/vinitkumar/django_geoip_redirection/badge.png](https://coveralls.io/r/vinitkumar/django_geoip_redirection)
-
-![https://pypip.in/d/django_geoip_redirection/badge.png](https://pypi.python.org/pypi/django_geoip_redirection/)
-
-![https://pypip.in/v/django_geoip_redirection/badge.png](https://pypi.python.org/pypi/django_geoip_redirection/)
-
-![https://pypip.in/license/django_geoip_redirection/badge.png](https://pypi.python.org/pypi/django_geoip_redirection/)
-
-
-
-
 It is a GeoIP based redirection middleware that redirects the user on basis of
 geolocation of the user. It uses Maxmind's free version of geoip database.
 
