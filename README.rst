@@ -1,57 +1,62 @@
 Django GeoIP Redirection
 ========================
 
+.. image:: https://travis-ci.org/vinitkumar/django-django_geoip_redirection.png
+  :target: https://travis-ci.org/vinitkumar/django-django_geoip_redirection
 
-Quickly setup the scaffolding for your django app.
+.. image:: https://coveralls.io/repos/vinitkumar/django-django_geoip_redirection/badge.png
+  :target: https://coveralls.io/r/vinitkumar/django-django_geoip_redirection
 
-What you get:
+.. image:: https://pypip.in/d/django-django_geoip_redirection/badge.png
+  :target:  https://pypi.python.org/pypi/django-django_geoip_redirection/
 
-* test infrastructure
-* Travis configuration with coveralls
-* documentation instrastructure
-* MIT LICENSE
-* setup.py
+.. image:: https://pypip.in/v/django-django_geoip_redirection/badge.png
+  :target:  https://pypi.python.org/pypi/django-django_geoip_redirection/
 
-
-Getting Started
-================
-
-Execute::
-
-    pip install Django
-    django-admin.py startapp --template=https://github.com/pinax/pinax-starter-app/zipball/master --extension=py,rst,in,sh,rc,yml <project_name>
+.. image:: https://pypip.in/license/django-django_geoip_redirection/badge.png
+  :target:  https://pypi.python.org/pypi/django-django_geoip_redirection/
 
 
-After you are running you have a fresh app, first update this readme by removing
-everything above and including this line and unindenting everything below this line. Also
-remember to edit the ``<user_or_org_name>`` in the travis and coveralls badge/links::
-
-    django_geoip_redirection
-    ========================
-
-    .. image:: https://travis-ci.org/<user_or_org_name>/django-django_geoip_redirection.png
-        :target: https://travis-ci.org/<user_or_org_name>/django-django_geoip_redirection
-
-    .. image:: https://coveralls.io/repos/<user_or_org_name>/django-django_geoip_redirection/badge.png
-        :target: https://coveralls.io/r/<user_or_org_name>/django-django_geoip_redirection
-
-    .. image:: https://pypip.in/d/django-django_geoip_redirection/badge.png
-        :target:  https://pypi.python.org/pypi/django-django_geoip_redirection/
-
-    .. image:: https://pypip.in/v/django-django_geoip_redirection/badge.png
-        :target:  https://pypi.python.org/pypi/django-django_geoip_redirection/
-
-    .. image:: https://pypip.in/license/django-django_geoip_redirection/badge.png
-        :target:  https://pypi.python.org/pypi/django-django_geoip_redirection/
 
 
-    Welcome to the documentation for django-django_geoip_redirection!
+It is a GeoIP based redirection middleware that redirects the user on basis of
+geolocation of the user.
+
+It uses Maxmind's free version of geoip database.
 
 
-    Running the Tests
-    ------------------------------------
+Using the middleware
+====================
 
-    You can run the tests with via::
+In order to use the middleware include it into your middlewares list in the
+settings file:
+
+    MIDDLEWARE_CLASSES = (
+      'django.contrib.sessions.middleware.SessionMiddleware',
+      'django.middleware.csrf.CsrfViewMiddleware',
+      'django.contrib.auth.middleware.AuthenticationMiddleware',
+      'django.contrib.messages.middleware.MessageMiddleware',
+      'django.middleware.locale.LocaleMiddleware',
+      'django.middleware.doc.XViewMiddleware',
+      'django.middleware.common.CommonMiddleware',
+      # Uncomment the next line for simple clickjacking protection:
+      # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+      'cms.middleware.page.CurrentPageMiddleware',
+      'cms.middleware.user.CurrentUserMiddleware',
+      'cms.middleware.toolbar.ToolbarMiddleware',
+      'cms.middleware.language.LanguageCookieMiddleware',
+      'django_geoip_redirection.middleware.LocationMiddleWare',
+    )
+
+
+
+
+
+
+Running the Tests
+------------------------------------
+
+You can run the tests with via::
 
         python setup.py test
 
