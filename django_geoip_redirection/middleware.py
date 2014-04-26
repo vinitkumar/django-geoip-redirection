@@ -23,8 +23,7 @@ class LocationMiddleWare(object):
         """
         Process incoming requests
         """
-        #NOTICE: This will make sure redirect loop is broken.
-        # The list is same as the languages in your django settings
+        # NOTICE: This will make sure redirect loop is broken.
         if request.path[:4] in ["/en/", "/nl/", "/in/"]:
             return None
         if 'HTTP_X_FORWARDED_FOR' in request.META:
