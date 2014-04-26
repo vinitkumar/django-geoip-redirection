@@ -14,7 +14,6 @@ env:
 
 install:
   - pip install $DJANGO --use-mirrors
-  - pip install flake8 --use-mirrors
   - pip install coverage coveralls --use-mirrors
   - pip install -e . --use-mirrors
 
