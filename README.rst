@@ -1,5 +1,5 @@
-pinax-starter-app
-=================
+Django GeoIP Redirection
+========================
 
 
 Quickly setup the scaffolding for your django app.
@@ -28,42 +28,42 @@ remember to edit the ``<user_or_org_name>`` in the travis and coveralls badge/li
 
     django_geoip_redirection
     ========================
-    
+
     .. image:: https://travis-ci.org/<user_or_org_name>/django-django_geoip_redirection.png
         :target: https://travis-ci.org/<user_or_org_name>/django-django_geoip_redirection
-    
+
     .. image:: https://coveralls.io/repos/<user_or_org_name>/django-django_geoip_redirection/badge.png
         :target: https://coveralls.io/r/<user_or_org_name>/django-django_geoip_redirection
-    
+
     .. image:: https://pypip.in/d/django-django_geoip_redirection/badge.png
         :target:  https://pypi.python.org/pypi/django-django_geoip_redirection/
-    
+
     .. image:: https://pypip.in/v/django-django_geoip_redirection/badge.png
         :target:  https://pypi.python.org/pypi/django-django_geoip_redirection/
-    
+
     .. image:: https://pypip.in/license/django-django_geoip_redirection/badge.png
         :target:  https://pypi.python.org/pypi/django-django_geoip_redirection/
-    
-    
+
+
     Welcome to the documentation for django-django_geoip_redirection!
-    
-    
+
+
     Running the Tests
     ------------------------------------
-    
+
     You can run the tests with via::
-    
+
         python setup.py test
-    
+
     or::
-    
+
         make test
-    
+
     or::
-    
+
         make all
-    
+
     or::
-    
+
         python runtests.py
 
