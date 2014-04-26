@@ -15,7 +15,7 @@ setup(
     author_email="vinit.kumar@changer.nl",
     description="GeoIP based redirection middleware",
     name="django_geoip_redirection",
-    long_description=read("README.rst"),
+    long_description=read("README.md"),
     version=__import__("django_geoip_redirection").__version__,
     url="http://django_geoip_redirection.rtfd.org/",
     license="MIT",
