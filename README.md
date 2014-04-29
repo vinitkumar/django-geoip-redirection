@@ -1,7 +1,7 @@
 Django GeoIP Redirection
 ========================
 
-[![Build Status](https://travis-ci.org/vinitkumar/django_geoip_redirection.svg?branch=feature/add-plugin-doc)](https://travis-ci.org/vinitkumar/django_geoip_redirection)
+[![Build Status](https://travis-ci.org/vinitkumar/django-geoip-redirection.svg?branch=master)](https://travis-ci.org/vinitkumar/django-geoip-redirection)
 
 [![Coverage Status](https://coveralls.io/repos/vinitkumar/django_geoip_redirection/badge.png)](https://coveralls.io/r/vinitkumar/django_geoip_redirection)
 
