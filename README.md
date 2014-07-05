@@ -25,7 +25,7 @@ MIDDLEWARE_CLASSES = (
 )
 ```
 
-Also add `django_geoip_redirection_` to INSTALLED APPS:
+Also add `django_geoip_redirection` to INSTALLED APPS:
 
 ```python
 INSTALLED_APPS = (
