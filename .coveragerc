@@ -1,4 +1,0 @@
-[run]
-source = {{ app_name }}
-omit = {{ app_name }}/tests/*
-branch = 1

@@ -21,14 +21,23 @@ class LocationMiddleWare(object):
 
     def process_request(self, request):
         """
-        Process incoming requests
+        Put in the list of countries you want to support.
+        ["/en/", "/nl/", "/in/"] contains the list of countries
+        you want to support. In this case, it's Netherlands, India
+        and Rest of the world.
+
+        I assume that the you have the conventions for websites.
         """
+
         # NOTICE: This will make sure redirect loop is broken.
         if request.path[:4] in ["/en/", "/nl/", "/in/"]:
             return None
+
         if 'HTTP_X_FORWARDED_FOR' in request.META:
             request.META['REMOTE_ADDR'] = request.META['HTTP_X_FORWARDED_FOR']
         ip_address = request.META['REMOTE_ADDR']
+        # get country name using Maxmind database.
+        # Now, just match and redirect.
         country = get_country_request(ip_address)
         if country == "India":
             return HttpResponseRedirect('/in/')
