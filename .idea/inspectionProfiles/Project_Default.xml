@@ -1,0 +1,31 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0" is_locked="false">
+    <option name="myName" value="Project Default" />
+    <option name="myLocal" value="false" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="17">
+            <item index="0" class="java.lang.String" itemvalue="gunicorn" />
+            <item index="1" class="java.lang.String" itemvalue="django-extensions" />
+            <item index="2" class="java.lang.String" itemvalue="django-sekizai" />
+            <item index="3" class="java.lang.String" itemvalue="dj-database-url" />
+            <item index="4" class="java.lang.String" itemvalue="Django" />
+            <item index="5" class="java.lang.String" itemvalue="South" />
+            <item index="6" class="java.lang.String" itemvalue="boto" />
+            <item index="7" class="java.lang.String" itemvalue="django-tinymce" />
+            <item index="8" class="java.lang.String" itemvalue="html5lib" />
+            <item index="9" class="java.lang.String" itemvalue="cmsplugin-file" />
+            <item index="10" class="java.lang.String" itemvalue="django-storages" />
+            <item index="11" class="java.lang.String" itemvalue="fix-pagemodel-publish.zip" />
+            <item index="12" class="java.lang.String" itemvalue="PIL" />
+            <item index="13" class="java.lang.String" itemvalue="django-mptt" />
+            <item index="14" class="java.lang.String" itemvalue="psycopg2" />
+            <item index="15" class="java.lang.String" itemvalue="django-classy-tags" />
+            <item index="16" class="java.lang.String" itemvalue="django-publisher" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

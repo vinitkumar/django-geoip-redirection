@@ -1,19 +1,16 @@
-Django GeoIP Redirection
+Django-geo-redirection
 ========================
 
-[![Build Status](https://travis-ci.org/vinitkumar/django-geoip-redirection.svg?branch=master)](https://travis-ci.org/vinitkumar/django-geoip-redirection)
+![World Map](https://i.cloudup.com/7rf2v_IDxv-2000x2000.png)
 
-[![Coverage Status](https://coveralls.io/repos/vinitkumar/django_geoip_redirection/badge.png)](https://coveralls.io/r/vinitkumar/django_geoip_redirection)
+GeoIP based redirection is awesome and achieving it isn't too hard either. I wrote this middleware 
+to ensure that my website would get redirected properly with regards to the location of the user
+accessing the website.
 
-It is a GeoIP based redirection middleware that redirects the user on basis of
-geolocation of the user. It uses Maxmind's free version of geoip database.
 
+## Usage:
 
-Using the middleware
-====================
-
-In order to use the middleware include it into your middlewares list in the
-settings file:
+Add the middleware in your settings file:
 
 ```python
 MIDDLEWARE_CLASSES = (
@@ -21,19 +18,12 @@ MIDDLEWARE_CLASSES = (
   'django.middleware.csrf.CsrfViewMiddleware',
   'django.contrib.auth.middleware.AuthenticationMiddleware',
   'django.contrib.messages.middleware.MessageMiddleware',
-  'django.middleware.locale.LocaleMiddleware',
-  'django.middleware.doc.XViewMiddleware',
-  'django.middleware.common.CommonMiddleware',
-  # Uncomment the next line for simple clickjacking protection:
-  # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
-  'cms.middleware.page.CurrentPageMiddleware',
-  'cms.middleware.user.CurrentUserMiddleware',
-  'cms.middleware.toolbar.ToolbarMiddleware',
   'cms.middleware.language.LanguageCookieMiddleware',
   'django_geoip_redirection.middleware.LocationMiddleWare',
 )
 ```
-And add the `django_geoip_redirection_` to list of INSTALLED APPS:
+
+Also add `django_geoip_redirection_` to INSTALLED APPS:
 
 ```python
 INSTALLED_APPS = (
@@ -42,20 +32,30 @@ INSTALLED_APPS = (
 )
 ```
 
+## Customization:
+
+```python
+# Changet the array for extension as per country you 
+# have to support
+if request.path[:4] in ["/en/", "/nl/", "/in/"]:
+    return None
+
+if 'HTTP_X_FORWARDED_FOR' in request.META:
+    request.META['REMOTE_ADDR'] = request.META['HTTP_X_FORWARDED_FOR']
+ip_address = request.META['REMOTE_ADDR']
+# get country name using Maxmind database.
+# Now, just match and redirect.
+# Likewise, replace the name of country to match and redirect.
+country = get_country_request(ip_address)
+if country == "India":
+    return HttpResponseRedirect('/in/')
+elif country == "Netherlands":
+    return HttpResponseRedirect('/nl/')
+else:
+    return HttpResponseRedirect('/en/')
+return None
+
+```
+
 You would also need to place the `GeoIP.dat.dat` present inside the data folder to
 your project root directory.
-
-
-
-
-Running the Tests
-------------------
-
-You can run the tests with via:
-
-```bash
-python setup.py test
-make test
-make all
-python runtests.py
-```
