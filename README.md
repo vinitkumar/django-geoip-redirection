@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/vinitkumar/django-geoip-redirection.svg?branch=master)](https://travis-ci.org/vinitkumar/django-geoip-redirection)
+
 Django-geoip-redirection
 ========================
 
