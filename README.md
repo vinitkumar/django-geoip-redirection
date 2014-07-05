@@ -35,7 +35,7 @@ INSTALLED_APPS = (
 ## Customization:
 
 ```python
-# Changet the array for extension as per country you 
+# Change the array for extension as per country you 
 # have to support
 if request.path[:4] in ["/en/", "/nl/", "/in/"]:
     return None
