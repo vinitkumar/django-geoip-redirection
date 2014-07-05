@@ -12,6 +12,9 @@ accessing the website.
 
 ## Usage:
 
+Install via pypi: `pip install django_geoip_redirection`
+
+
 Add the middleware in your settings file:
 
 ```python
