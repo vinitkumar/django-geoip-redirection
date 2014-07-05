@@ -1,4 +1,4 @@
-Django-geo-redirection
+Django-geoip-redirection
 ========================
 
 ![World Map](https://i.cloudup.com/7rf2v_IDxv-2000x2000.png)
